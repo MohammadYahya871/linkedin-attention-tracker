@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Attention Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="w-80 min-h-96 p-4">
+  <div class="flex flex-col gap-4">
+    <header class="flex items-center gap-3 pb-3 border-b border-gray-200">
+      <div class="w-10 h-10 rounded-lg bg-linkedin-blue flex items-center justify-center text-white font-bold text-lg">
+        L
+      </div>
+      <div>
+        <h1 class="font-semibold text-gray-900">Attention Tracker</h1>
+        <p class="text-xs text-gray-500">LinkedIn reading insights</p>
+      </div>
+    </header>
+
+    <section class="grid grid-cols-2 gap-3">
+      <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 animate-fade-in">
+        <p class="text-xs font-medium text-gray-500 uppercase tracking-wide">Today</p>
+        <p id="posts-today" class="text-2xl font-bold text-linkedin-blue">0</p>
+        <p class="text-xs text-gray-500">posts captured</p>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 animate-fade-in">
+        <p class="text-xs font-medium text-gray-500 uppercase tracking-wide">Total</p>
+        <p id="total-posts" class="text-2xl font-bold text-gray-900">0</p>
+        <p class="text-xs text-gray-500">posts saved</p>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+      <p class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">Attention time</p>
+      <p id="attention-time" class="text-xl font-semibold text-linkedin-blue">0m</p>
+      <p class="text-xs text-gray-500">Total reading time</p>
+    </section>
+
+    <nav class="flex flex-col gap-2 pt-2">
+      <a id="btn-dashboard" href="#" class="flex items-center gap-3 p-3 rounded-lg bg-linkedin-blue text-white font-medium hover:bg-linkedin-blue-dark transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+        </svg>
+        View Dashboard
+      </a>
+      <a id="btn-settings" href="#" class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        Settings
+      </a>
+    </nav>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

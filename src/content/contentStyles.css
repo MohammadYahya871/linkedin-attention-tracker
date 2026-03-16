@@ -1,0 +1,7 @@
+/* Minimal content script styles - optional overlay indicators */
+.lat-saved-indicator {
+  position: absolute;
+  font-size: 12px;
+  color: #0A66C2;
+  pointer-events: none;
+}

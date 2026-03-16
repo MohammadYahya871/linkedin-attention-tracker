@@ -1,0 +1,1 @@
+{"version":3,"file":"PostRecord.js","sourceRoot":"","sources":["../src/models/PostRecord.ts"],"names":[],"mappings":"AAAA;;GAEG;AAsCH,iCAAiC;AACjC,MAAM,CAAC,MAAM,gBAAgB,GAAsB;IACjD,kBAAkB,EAAE,EAAE;IACtB,iBAAiB,EAAE,KAAK;IACxB,cAAc,EAAE,GAAG;IACnB,UAAU,EAAE,KAAK;IACjB,gBAAgB,EAAE,MAAM;IACxB,SAAS,EAAE,EAAE;IACb,cAAc,EAAE,KAAK;CACtB,CAAC"}

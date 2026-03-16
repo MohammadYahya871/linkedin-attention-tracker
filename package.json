@@ -1,0 +1,25 @@
+{
+  "name": "linkedin-attention-tracker",
+  "version": "1.0.0",
+  "description": "Chrome Extension that tracks attention while browsing LinkedIn",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:ts && npm run build:content && npm run build:css && npm run copy",
+    "icons": "node scripts/resize-icon.js",
+    "build:ts": "tsc",
+    "build:content": "node scripts/build-content.js",
+    "build:css": "tailwindcss -i ./src/ui/styles/input.css -o ./ui/styles/output.css --minify",
+    "copy": "node scripts/copy-assets.js",
+    "watch": "npm run build && concurrently \"tsc -w\" \"tailwindcss -i ./src/ui/styles/input.css -o ./ui/styles/output.css -w\"",
+    "clean": "rimraf dist background content models utils ui shortcuts"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.27.4",
+    "rimraf": "^5.0.5",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  }
+}

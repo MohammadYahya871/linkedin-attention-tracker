@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Attention Tracker - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-8">
+      <h1 class="text-2xl font-bold text-gray-900">Saved Posts</h1>
+      <p class="text-gray-500 mt-1">Posts you've spent time reading on LinkedIn</p>
+    </header>
+
+    <div class="flex flex-wrap gap-4 mb-6">
+      <div class="flex-1 min-w-[200px]">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search posts..."
+          class="w-full px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-linkedin-blue focus:border-transparent"
+        />
+      </div>
+      <select id="filter-author" class="px-4 py-2 rounded-lg border border-gray-200 bg-white">
+        <option value="">All authors</option>
+      </select>
+      <select id="filter-date" class="px-4 py-2 rounded-lg border border-gray-200 bg-white">
+        <option value="">All time</option>
+        <option value="today">Today</option>
+        <option value="week">This week</option>
+        <option value="month">This month</option>
+      </select>
+      <select id="sort-by" class="px-4 py-2 rounded-lg border border-gray-200 bg-white">
+        <option value="seenAt">Date</option>
+        <option value="dwellTimeSeconds">Dwell time</option>
+        <option value="attentionScore">Attention score</option>
+      </select>
+      <div class="flex gap-2">
+        <button id="btn-export-json" class="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-medium">
+          Export JSON
+        </button>
+        <button id="btn-export-csv" class="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-medium">
+          Export CSV
+        </button>
+        <button id="btn-export-md" class="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-medium">
+          Export MD
+        </button>
+      </div>
+    </div>
+
+    <div id="posts-container" class="space-y-4">
+      <!-- Posts loaded dynamically -->
+    </div>
+
+    <div id="empty-state" class="hidden text-center py-16 text-gray-500">
+      <p class="text-lg">No saved posts yet</p>
+      <p class="mt-2">Browse LinkedIn and spend time reading posts to capture them automatically.</p>
+    </div>
+
+    <div id="loading" class="text-center py-8 text-gray-500">
+      Loading...
+    </div>
+  </div>
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>
