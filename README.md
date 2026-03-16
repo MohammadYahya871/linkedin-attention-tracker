@@ -2,6 +2,8 @@
 
 A production-quality Chrome Extension that tracks your attention while browsing LinkedIn and automatically saves posts you spend time reading.
 
+> **Note:** This tool was AI generated.
+
 ## Features
 
 - **Automatic post saving** — Saves posts visible for longer than a configurable dwell time (default: 10 seconds)
